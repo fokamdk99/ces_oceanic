@@ -8,7 +8,7 @@ namespace DagAir.Addresses.Data.AppContext
 {
     public class OceanicAppContext : DbContext, IOceanicAppContext
     {
-        private const string Schema = "db-oa-dk3";
+        private const string Schema = "oceanic";
         
         public OceanicAppContext() {}
         
@@ -43,6 +43,7 @@ namespace DagAir.Addresses.Data.AppContext
             modelBuilder.SeedPricings();
             modelBuilder.SeedRoutes();
             modelBuilder.SeedUsers();
+            modelBuilder.SeedParcelToCity();
         }
     }
 }

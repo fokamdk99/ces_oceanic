@@ -1,6 +1,6 @@
 namespace Oceanic.Data.Migrations
 {
-    public class WeatherForecast
+    public class Startup
     {
         public DateTime Date { get; set; }
 

@@ -12,12 +12,12 @@ namespace Oceanic.SearchEngine.Data.DataSeed
                     new Parcel()
                     {
                         Id = 1,
-                        Name = "addis abeba"
+                        Weight = 2
                     },
                     new Parcel()
                     {
                         Id = 2,
-                        Name = "amatave"
+                        Weight = 4
                     }
                 );
         }
