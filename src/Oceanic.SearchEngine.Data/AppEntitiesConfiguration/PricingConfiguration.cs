@@ -13,6 +13,12 @@ namespace Oceanic.SearchEngine.Data.AppEntitiesConfiguration
 
             builder.Property(e => e.Price)
                 .IsRequired();
+
+            builder.Property(e => e.Weight)
+                .IsRequired();
+
+            builder.Property(e => e.ParcelSize)
+                .IsRequired();
         }
     }
 }

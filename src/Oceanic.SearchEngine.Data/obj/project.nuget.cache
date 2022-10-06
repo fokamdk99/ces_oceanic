@@ -1,9 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "LjzCV3QWj035SUgh9ujJQCGe0utwS+9bCwpupPOlbwSZtgnLR6rc7zvJqvxdHRazbXzbPlmBh7jOtool+JvxOg==",
+  "dgSpecHash": "egWXy2q3V+QSBPeNLej1jJ6m1tRXdYYQflS4EY56PuDtc5UbT5w20YE3aGQT/K8d1ZbwrJpgKflS4w/S7K5knw==",
   "success": true,
   "projectFilePath": "C:\\Users\\kars\\Source\\Repos\\CES\\src\\Oceanic.SearchEngine.Data\\Oceanic.SearchEngine.Data.csproj",
   "expectedPackageFiles": [
+    "C:\\Users\\kars\\.nuget\\packages\\efcore.namingconventions\\6.0.0\\efcore.namingconventions.6.0.0.nupkg.sha512",
     "C:\\Users\\kars\\.nuget\\packages\\humanizer.core\\2.8.26\\humanizer.core.2.8.26.nupkg.sha512",
     "C:\\Users\\kars\\.nuget\\packages\\microsoft.csharp\\4.5.0\\microsoft.csharp.4.5.0.nupkg.sha512",
     "C:\\Users\\kars\\.nuget\\packages\\microsoft.data.sqlclient\\2.1.4\\microsoft.data.sqlclient.2.1.4.nupkg.sha512",

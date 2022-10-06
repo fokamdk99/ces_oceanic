@@ -11,6 +11,15 @@ namespace Oceanic.SearchEngine.Data.AppEntitiesConfiguration
             builder.ConfigureBase();
             builder.HasKey(e => e.Id);
 
+            builder.Property(e => e.OriginId)
+                .IsRequired();
+
+            builder.Property(e => e.DestinationId)
+                .IsRequired();
+
+            builder.Property(e => e.Owner)
+                .IsRequired();
+
             builder.Property(e => e.TravelTime)
                 .IsRequired();
         }

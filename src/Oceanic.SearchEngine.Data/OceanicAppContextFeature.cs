@@ -2,13 +2,13 @@
 using Microsoft.Extensions.DependencyInjection;
 using Oceanic.SearchEngine.Data.AppContext;
 
-namespace DagAir.Addresses.Data
+namespace Oceanic.SearchEngine.Data
 {
     public static class OceanicAppContextFeature
     {
         public static IServiceCollection AddDagAirAddressesAppDbContext(this IServiceCollection services)
         {
-            services.AddSingleton<DagAirAddressesAppContextProvider>();
+            services.AddSingleton<OceanicAppContextProvider>();
             services.AddScoped<IOceanicAppContext, OceanicAppContext>(x =>
             {
                 var provider = x.GetRequiredService<OceanicAppContextProvider>();

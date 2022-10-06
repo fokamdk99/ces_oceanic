@@ -27,10 +27,10 @@ namespace DagAir.Addresses.Data.AppContext
         {
             var contextOptions = new DbContextOptionsBuilder<OceanicAppContext>()
                 .UseLoggerFactory(_loggerFactory)
-                .UseMySQL(_connectionString)
+                .UseSqlServer(_connectionString)
                 .Options;
 
-            return new DagAirAddressesAppContext(contextOptions);
+            return new OceanicAppContext(contextOptions);
         }
     }
 }

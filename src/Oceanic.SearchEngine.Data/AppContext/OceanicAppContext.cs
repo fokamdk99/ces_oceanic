@@ -8,7 +8,7 @@ namespace DagAir.Addresses.Data.AppContext
 {
     public class OceanicAppContext : DbContext, IOceanicAppContext
     {
-        private const string Schema = "db-oa-dk3";
+        private const string Schema = "oceanic";
         
         public OceanicAppContext() {}
         
@@ -19,6 +19,7 @@ namespace DagAir.Addresses.Data.AppContext
         public DbSet<Pricing> Pricings { get; set; }
         public DbSet<Route> Routes { get; set; }
         public DbSet<User> Users { get; set; }
+        public DbSet<ParcelToCity> ParcelToCities { get; set; }
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
@@ -43,6 +44,7 @@ namespace DagAir.Addresses.Data.AppContext
             modelBuilder.SeedPricings();
             modelBuilder.SeedRoutes();
             modelBuilder.SeedUsers();
+            modelBuilder.SeedParcelToCity();
         }
     }
 }

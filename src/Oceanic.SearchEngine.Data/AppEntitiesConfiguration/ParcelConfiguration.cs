@@ -10,8 +10,24 @@ namespace Oceanic.SearchEngine.Data.AppEntitiesConfiguration
         {
             builder.ConfigureBase();
             builder.HasKey(e => e.Id);
+            builder.HasIndex(e => e.Id);
 
             builder.Property(e => e.Weight)
+                .IsRequired();
+
+            builder.Property(e => e.Size)
+                .IsRequired();
+
+            builder.Property(e => e.Type)
+                .IsRequired();
+
+            builder.Property(e => e.Price)
+                .IsRequired();
+
+            builder.Property(e => e.FromId)
+                .IsRequired();
+
+            builder.Property(e => e.ToId)
                 .IsRequired();
         }
     }

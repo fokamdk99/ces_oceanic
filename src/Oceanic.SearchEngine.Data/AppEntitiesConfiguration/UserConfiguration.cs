@@ -13,6 +13,15 @@ namespace Oceanic.SearchEngine.Data.AppEntitiesConfiguration
 
             builder.Property(e => e.Email)
                 .IsRequired();
+
+            builder.Property(e => e.Password)
+                .IsRequired();
+
+            builder.Property(e => e.Role)
+                .IsRequired();
+
+            builder.Property(e => e.FullName)
+                .IsRequired();
         }
     }
 }

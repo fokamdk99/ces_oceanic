@@ -1,3 +1,11 @@
+using DagAir.Addresses.Data.Migrations.Context;
+using Microsoft.EntityFrameworkCore;
+using Oceanic.SearchEngine.Data.Sharding;
+using OceanicSearchEngine.Data.Migrations.Context;
+using Serilog;
+using Serilog.Context;
+using ILogger = Serilog.ILogger;
+
 namespace Oceanic.Data.Migrations
 {
     public class Program
@@ -74,9 +82,9 @@ namespace Oceanic.Data.Migrations
 
         private static Task CreateUserDbMigrationTask(IConfiguration configuration)
         {
-            const string appDatabaseName = "DagAir.Addresses";
+            const string appDatabaseName = "Oceanic";
             var connectionString = configuration.GetConnectionString(appDatabaseName);
-            connectionString = connectionString + configuration[$"ConnectionKeys:{appDatabaseName}"] + ";";
+            //connectionString = connectionString + configuration[$"ConnectionKeys:{appDatabaseName}"] + ";";
             return MigrateDbAsync(new ConnectionString(appDatabaseName, connectionString), new AppContextFactory());
         }
     }

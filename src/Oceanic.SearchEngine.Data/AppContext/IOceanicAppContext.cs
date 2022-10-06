@@ -15,6 +15,7 @@ namespace Oceanic.SearchEngine.Data.AppContext
         public DbSet<Pricing> Pricings { get; set; }
         public DbSet<Route> Routes { get; set; }
         public DbSet<User> Users { get; set; }
+        public DbSet<ParcelToCity> ParcelToCities { get; set; }
         public Task<int> SaveChangesAsync(CancellationToken cancellationToken = default);
     }
 }
