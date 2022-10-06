@@ -19,6 +19,7 @@ namespace DagAir.Addresses.Data.AppContext
         public DbSet<Pricing> Pricings { get; set; }
         public DbSet<Route> Routes { get; set; }
         public DbSet<User> Users { get; set; }
+        public DbSet<ParcelToCity> ParcelToCities { get; set; }
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {

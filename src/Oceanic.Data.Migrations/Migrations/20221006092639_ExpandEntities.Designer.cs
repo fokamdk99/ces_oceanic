@@ -12,8 +12,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace OceanicSearchEngine.Data.Migrations.Migrations
 {
     [DbContext(typeof(OceanicAppContext))]
-    [Migration("20221006082235_InitialMigration")]
-    partial class InitialMigration
+    [Migration("20221006092639_ExpandEntities")]
+    partial class ExpandEntities
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -45,12 +45,7 @@ namespace OceanicSearchEngine.Data.Migrations.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<long?>("ParcelId")
-                        .HasColumnType("bigint");
-
                     b.HasKey("Id");
-
-                    b.HasIndex("ParcelId");
 
                     b.ToTable("Cities", "oceanic");
 
@@ -105,6 +100,8 @@ namespace OceanicSearchEngine.Data.Migrations.Migrations
 
                     b.HasKey("Id");
 
+                    b.HasIndex("Id");
+
                     b.ToTable("Parcels", "oceanic");
 
                     b.HasData(
@@ -129,6 +126,46 @@ namespace OceanicSearchEngine.Data.Migrations.Migrations
                             ToId = 0L,
                             Type = 0,
                             Weight = 4f
+                        });
+                });
+
+            modelBuilder.Entity("Oceanic.SearchEngine.Data.AppEntities.ParcelToCity", b =>
+                {
+                    b.Property<long>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("bigint");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<long>("Id"), 1L, 1);
+
+                    b.Property<long>("CityId")
+                        .HasColumnType("bigint");
+
+                    b.Property<DateTime>("Created")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("datetime2")
+                        .HasDefaultValueSql("CURRENT_TIMESTAMP");
+
+                    b.Property<DateTime?>("Modified")
+                        .HasColumnType("datetime2");
+
+                    b.Property<long>("ParcelId")
+                        .HasColumnType("bigint");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("Id");
+
+                    b.HasIndex("ParcelId");
+
+                    b.ToTable("ParcelToCities", "oceanic");
+
+                    b.HasData(
+                        new
+                        {
+                            Id = 1L,
+                            CityId = 1L,
+                            Created = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            ParcelId = 1L
                         });
                 });
 
@@ -193,8 +230,14 @@ namespace OceanicSearchEngine.Data.Migrations.Migrations
                         .HasColumnType("datetime2")
                         .HasDefaultValueSql("CURRENT_TIMESTAMP");
 
+                    b.Property<long>("DestinationId")
+                        .HasColumnType("bigint");
+
                     b.Property<DateTime?>("Modified")
                         .HasColumnType("datetime2");
+
+                    b.Property<long>("OriginId")
+                        .HasColumnType("bigint");
 
                     b.Property<int>("Owner")
                         .HasColumnType("int");
@@ -211,6 +254,8 @@ namespace OceanicSearchEngine.Data.Migrations.Migrations
                         {
                             Id = 1L,
                             Created = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            DestinationId = 0L,
+                            OriginId = 0L,
                             Owner = 0,
                             TravelTime = 8
                         },
@@ -218,6 +263,8 @@ namespace OceanicSearchEngine.Data.Migrations.Migrations
                         {
                             Id = 2L,
                             Created = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            DestinationId = 0L,
+                            OriginId = 0L,
                             Owner = 0,
                             TravelTime = 8
                         });
@@ -247,6 +294,13 @@ namespace OceanicSearchEngine.Data.Migrations.Migrations
                     b.Property<DateTime?>("Modified")
                         .HasColumnType("datetime2");
 
+                    b.Property<string>("Password")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<int>("Role")
+                        .HasColumnType("int");
+
                     b.HasKey("Id");
 
                     b.ToTable("Users", "oceanic");
@@ -257,22 +311,28 @@ namespace OceanicSearchEngine.Data.Migrations.Migrations
                             Id = 1L,
                             Created = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Email = "zulu@oceanic.com",
-                            FullName = "Mr Zulu"
+                            FullName = "Mr Zulu",
+                            Password = "abc123",
+                            Role = 0
                         },
                         new
                         {
                             Id = 2L,
                             Created = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Email = "stas@oceanic.com",
-                            FullName = "Stanislaw"
+                            FullName = "Stanislaw",
+                            Password = "abc123",
+                            Role = 0
                         });
                 });
 
-            modelBuilder.Entity("Oceanic.SearchEngine.Data.AppEntities.City", b =>
+            modelBuilder.Entity("Oceanic.SearchEngine.Data.AppEntities.ParcelToCity", b =>
                 {
                     b.HasOne("Oceanic.SearchEngine.Data.AppEntities.Parcel", null)
                         .WithMany("Stops")
-                        .HasForeignKey("ParcelId");
+                        .HasForeignKey("ParcelId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
                 });
 
             modelBuilder.Entity("Oceanic.SearchEngine.Data.AppEntities.Parcel", b =>

@@ -12,14 +12,8 @@ namespace Oceanic.SearchEngine.Data.DataSeed
                     new ParcelToCity()
                     {
                         Id = 1,
-                        Parcel = new Parcel
-                        {
-                            Id = 1
-                        },
-                        City = new City
-                        {
-                            Id = 1
-                        }
+                        ParcelId = 1,
+                        CityId = 1
                     }
                 );
         }

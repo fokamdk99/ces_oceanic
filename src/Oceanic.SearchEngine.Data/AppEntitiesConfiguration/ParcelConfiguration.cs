@@ -29,10 +29,6 @@ namespace Oceanic.SearchEngine.Data.AppEntitiesConfiguration
 
             builder.Property(e => e.ToId)
                 .IsRequired();
-
-            builder.HasMany(x => x.Stops)
-                .WithOne(c => c.Parcel)
-                .HasForeignKey(c => c.Id);
         }
     }
 }

@@ -13,13 +13,15 @@ namespace Oceanic.SearchEngine.Data.DataSeed
                     {
                         Id = 1,
                         Email = "zulu@oceanic.com",
-                        FullName = "Mr Zulu"
+                        FullName = "Mr Zulu",
+                        Password = "abc123"
                     },
                     new User()
                     {
                         Id = 2,
                         Email = "stas@oceanic.com",
-                        FullName = "Stanislaw"
+                        FullName = "Stanislaw",
+                        Password = "abc123"
                     }
                 );
         }

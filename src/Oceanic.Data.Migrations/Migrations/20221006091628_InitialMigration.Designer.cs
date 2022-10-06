@@ -4,6 +4,7 @@ using DagAir.Addresses.Data.AppContext;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 #nullable disable
@@ -11,9 +12,10 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace OceanicSearchEngine.Data.Migrations.Migrations
 {
     [DbContext(typeof(OceanicAppContext))]
-    partial class OceanicAppContextModelSnapshot : ModelSnapshot
+    [Migration("20221006091628_InitialMigration")]
+    partial class InitialMigration
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -151,6 +153,8 @@ namespace OceanicSearchEngine.Data.Migrations.Migrations
 
                     b.HasKey("Id");
 
+                    b.HasIndex("CityId");
+
                     b.HasIndex("Id");
 
                     b.HasIndex("ParcelId");
@@ -228,14 +232,8 @@ namespace OceanicSearchEngine.Data.Migrations.Migrations
                         .HasColumnType("datetime2")
                         .HasDefaultValueSql("CURRENT_TIMESTAMP");
 
-                    b.Property<long>("DestinationId")
-                        .HasColumnType("bigint");
-
                     b.Property<DateTime?>("Modified")
                         .HasColumnType("datetime2");
-
-                    b.Property<long>("OriginId")
-                        .HasColumnType("bigint");
 
                     b.Property<int>("Owner")
                         .HasColumnType("int");
@@ -252,8 +250,6 @@ namespace OceanicSearchEngine.Data.Migrations.Migrations
                         {
                             Id = 1L,
                             Created = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            DestinationId = 0L,
-                            OriginId = 0L,
                             Owner = 0,
                             TravelTime = 8
                         },
@@ -261,8 +257,6 @@ namespace OceanicSearchEngine.Data.Migrations.Migrations
                         {
                             Id = 2L,
                             Created = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            DestinationId = 0L,
-                            OriginId = 0L,
                             Owner = 0,
                             TravelTime = 8
                         });
@@ -292,13 +286,6 @@ namespace OceanicSearchEngine.Data.Migrations.Migrations
                     b.Property<DateTime?>("Modified")
                         .HasColumnType("datetime2");
 
-                    b.Property<string>("Password")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<int>("Role")
-                        .HasColumnType("int");
-
                     b.HasKey("Id");
 
                     b.ToTable("Users", "oceanic");
@@ -309,28 +296,35 @@ namespace OceanicSearchEngine.Data.Migrations.Migrations
                             Id = 1L,
                             Created = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Email = "zulu@oceanic.com",
-                            FullName = "Mr Zulu",
-                            Password = "abc123",
-                            Role = 0
+                            FullName = "Mr Zulu"
                         },
                         new
                         {
                             Id = 2L,
                             Created = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Email = "stas@oceanic.com",
-                            FullName = "Stanislaw",
-                            Password = "abc123",
-                            Role = 0
+                            FullName = "Stanislaw"
                         });
                 });
 
             modelBuilder.Entity("Oceanic.SearchEngine.Data.AppEntities.ParcelToCity", b =>
                 {
+                    b.HasOne("Oceanic.SearchEngine.Data.AppEntities.City", null)
+                        .WithMany("ParcelToCities")
+                        .HasForeignKey("CityId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
                     b.HasOne("Oceanic.SearchEngine.Data.AppEntities.Parcel", null)
                         .WithMany("Stops")
                         .HasForeignKey("ParcelId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
+                });
+
+            modelBuilder.Entity("Oceanic.SearchEngine.Data.AppEntities.City", b =>
+                {
+                    b.Navigation("ParcelToCities");
                 });
 
             modelBuilder.Entity("Oceanic.SearchEngine.Data.AppEntities.Parcel", b =>

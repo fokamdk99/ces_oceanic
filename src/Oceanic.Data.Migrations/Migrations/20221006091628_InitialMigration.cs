@@ -13,6 +13,22 @@ namespace OceanicSearchEngine.Data.Migrations.Migrations
                 name: "oceanic");
 
             migrationBuilder.CreateTable(
+                name: "Cities",
+                schema: "oceanic",
+                columns: table => new
+                {
+                    Id = table.Column<long>(type: "bigint", nullable: false)
+                        .Annotation("SqlServer:Identity", "1, 1"),
+                    Name = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    Created = table.Column<DateTime>(type: "datetime2", nullable: false, defaultValueSql: "CURRENT_TIMESTAMP"),
+                    Modified = table.Column<DateTime>(type: "datetime2", nullable: true)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_Cities", x => x.Id);
+                });
+
+            migrationBuilder.CreateTable(
                 name: "Parcels",
                 schema: "oceanic",
                 columns: table => new
@@ -86,36 +102,44 @@ namespace OceanicSearchEngine.Data.Migrations.Migrations
                 });
 
             migrationBuilder.CreateTable(
-                name: "Cities",
+                name: "ParcelToCities",
                 schema: "oceanic",
                 columns: table => new
                 {
                     Id = table.Column<long>(type: "bigint", nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
-                    Name = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    ParcelId = table.Column<long>(type: "bigint", nullable: true),
+                    CityId = table.Column<long>(type: "bigint", nullable: false),
+                    ParcelId = table.Column<long>(type: "bigint", nullable: false),
                     Created = table.Column<DateTime>(type: "datetime2", nullable: false, defaultValueSql: "CURRENT_TIMESTAMP"),
                     Modified = table.Column<DateTime>(type: "datetime2", nullable: true)
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_Cities", x => x.Id);
+                    table.PrimaryKey("PK_ParcelToCities", x => x.Id);
                     table.ForeignKey(
-                        name: "FK_Cities_Parcels_ParcelId",
+                        name: "FK_ParcelToCities_Cities_CityId",
+                        column: x => x.CityId,
+                        principalSchema: "oceanic",
+                        principalTable: "Cities",
+                        principalColumn: "Id",
+                        onDelete: ReferentialAction.Cascade);
+                    table.ForeignKey(
+                        name: "FK_ParcelToCities_Parcels_ParcelId",
                         column: x => x.ParcelId,
                         principalSchema: "oceanic",
                         principalTable: "Parcels",
-                        principalColumn: "Id");
+                        principalColumn: "Id",
+                        onDelete: ReferentialAction.Cascade);
                 });
 
             migrationBuilder.InsertData(
                 schema: "oceanic",
                 table: "Cities",
-                columns: new[] { "Id", "Modified", "Name", "ParcelId" },
+                columns: new[] { "Id", "Modified", "Name" },
                 values: new object[,]
                 {
-                    { 1L, null, "addis abeba", null },
-                    { 2L, null, "amatave", null }
+                    { 1L, null, "addis abeba" },
+                    { 2L, null, "amatave" }
                 });
 
             migrationBuilder.InsertData(
@@ -158,17 +182,41 @@ namespace OceanicSearchEngine.Data.Migrations.Migrations
                     { 2L, "stas@oceanic.com", "Stanislaw", null }
                 });
 
-            migrationBuilder.CreateIndex(
-                name: "IX_Cities_ParcelId",
+            migrationBuilder.InsertData(
                 schema: "oceanic",
-                table: "Cities",
+                table: "ParcelToCities",
+                columns: new[] { "Id", "CityId", "Modified", "ParcelId" },
+                values: new object[] { 1L, 1L, null, 1L });
+
+            migrationBuilder.CreateIndex(
+                name: "IX_Parcels_Id",
+                schema: "oceanic",
+                table: "Parcels",
+                column: "Id");
+
+            migrationBuilder.CreateIndex(
+                name: "IX_ParcelToCities_CityId",
+                schema: "oceanic",
+                table: "ParcelToCities",
+                column: "CityId");
+
+            migrationBuilder.CreateIndex(
+                name: "IX_ParcelToCities_Id",
+                schema: "oceanic",
+                table: "ParcelToCities",
+                column: "Id");
+
+            migrationBuilder.CreateIndex(
+                name: "IX_ParcelToCities_ParcelId",
+                schema: "oceanic",
+                table: "ParcelToCities",
                 column: "ParcelId");
         }
 
         protected override void Down(MigrationBuilder migrationBuilder)
         {
             migrationBuilder.DropTable(
-                name: "Cities",
+                name: "ParcelToCities",
                 schema: "oceanic");
 
             migrationBuilder.DropTable(
@@ -181,6 +229,10 @@ namespace OceanicSearchEngine.Data.Migrations.Migrations
 
             migrationBuilder.DropTable(
                 name: "Users",
+                schema: "oceanic");
+
+            migrationBuilder.DropTable(
+                name: "Cities",
                 schema: "oceanic");
 
             migrationBuilder.DropTable(

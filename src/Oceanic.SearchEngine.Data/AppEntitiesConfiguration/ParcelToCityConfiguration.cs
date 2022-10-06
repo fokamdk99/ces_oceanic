@@ -12,10 +12,8 @@ namespace Oceanic.SearchEngine.Data.AppEntitiesConfiguration
             builder.HasKey(e => e.Id);
             builder.HasIndex(e => e.Id);
 
-            builder.Property(e => e.City);
             builder.Property(e => e.CityId);
 
-            builder.Property(e => e.Parcel);
             builder.Property(e => e.ParcelId);
         }
     }
