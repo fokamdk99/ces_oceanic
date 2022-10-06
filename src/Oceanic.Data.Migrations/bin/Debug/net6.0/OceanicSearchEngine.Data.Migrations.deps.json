@@ -519,6 +519,7 @@
       "Oceanic.SearchEngine.Data/1.0.0": {
         "dependencies": {
           "EFCore.NamingConventions": "6.0.0",
+          "Microsoft.EntityFrameworkCore": "6.0.9",
           "Microsoft.EntityFrameworkCore.SqlServer": "6.0.9"
         },
         "runtime": {

@@ -208,23 +208,23 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\kars\\.nuget\\packages\\": {},
+    "C:\\Users\\stas\\.nuget\\packages\\": {},
     "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\kars\\Source\\Repos\\CES\\src\\Oceanic.SearchEngine\\Oceanic.SearchEngine\\Oceanic.SearchEngine.csproj",
+      "projectUniqueName": "C:\\Users\\stas\\Documents\\CES\\implementation\\ces_oceanic\\src\\Oceanic.SearchEngine\\Oceanic.SearchEngine\\Oceanic.SearchEngine.csproj",
       "projectName": "Oceanic.SearchEngine",
-      "projectPath": "C:\\Users\\kars\\Source\\Repos\\CES\\src\\Oceanic.SearchEngine\\Oceanic.SearchEngine\\Oceanic.SearchEngine.csproj",
-      "packagesPath": "C:\\Users\\kars\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\kars\\Source\\Repos\\CES\\src\\Oceanic.SearchEngine\\Oceanic.SearchEngine\\obj\\",
+      "projectPath": "C:\\Users\\stas\\Documents\\CES\\implementation\\ces_oceanic\\src\\Oceanic.SearchEngine\\Oceanic.SearchEngine\\Oceanic.SearchEngine.csproj",
+      "packagesPath": "C:\\Users\\stas\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\stas\\Documents\\CES\\implementation\\ces_oceanic\\src\\Oceanic.SearchEngine\\Oceanic.SearchEngine\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
       ],
       "configFilePaths": [
-        "C:\\Users\\kars\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\stas\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
@@ -274,7 +274,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.300\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.301\\RuntimeIdentifierGraph.json"
       }
     }
   }

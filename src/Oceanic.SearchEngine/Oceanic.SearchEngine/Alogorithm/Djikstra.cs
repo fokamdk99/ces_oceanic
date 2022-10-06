@@ -1,4 +1,6 @@
-﻿namespace Oceanic.SearchEngine.Alogorithm
+﻿using System.Text;
+
+namespace Oceanic.SearchEngine.Alogorithm
 {
     class Djikstra
     {
@@ -36,7 +38,7 @@
             // of 0 because we're already there.
             nodeDict[startNode].Value = 0;
 
-            var queue = new PrioQueue();
+            var queue = new PriorityQueue();
             queue.AddNodeWithPriority(nodeDict[startNode]);
 
             // Do the calculations to find the shortest path to every node
@@ -112,7 +114,7 @@
         // Every directly connected node that we find we also add to the queue
         // (which is sorted by distance), if it's not already in the queue.
         // After we're finished 
-        private static void CheckNode(PrioQueue queue, string destinationNode)
+        private static void CheckNode(PriorityQueue queue, string destinationNode)
         {
             // If there are no nodes left to check in our queue, we're done.
             if (queue.Count == 0)

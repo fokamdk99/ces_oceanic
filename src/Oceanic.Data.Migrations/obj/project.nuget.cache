@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "bgQ9+i5U91Of5IFHhqouz53c0ju+bj/GWMR6L/lsgGtpTR2PXL95PFayd4Iyi6GzbrflGM6s9dSLcLo+2QEYfQ==",
+  "dgSpecHash": "Yo529orWLrZYtZK2yJv6nVb3Mu83XyRQHypt1f2hozTBP2Ce/Xe8Y0SXjO5/djYjT3BKE+5ZcA21EqEBi6xwlA==",
   "success": true,
   "projectFilePath": "C:\\Users\\stas\\Documents\\CES\\implementation\\ces_oceanic\\src\\Oceanic.Data.Migrations\\OceanicSearchEngine.Data.Migrations.csproj",
   "expectedPackageFiles": [

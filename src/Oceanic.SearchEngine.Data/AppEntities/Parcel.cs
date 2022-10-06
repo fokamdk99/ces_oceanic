@@ -5,7 +5,7 @@
         public long Id { get; set; }
         public virtual long FromId { get; set; }
         public virtual long ToId { get; set; }
-        public virtual List<ParcelToCity> Stops { get; set; }
+        public virtual ICollection<ParcelToCity> Stops { get; set; }
         public float Price { get; set; }
         public ParcelType Type { get; set; }
         public ParcelSize Size { get; set; }
