@@ -3,9 +3,11 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.2.32616.157
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Oceanic.SearchEngine", "Oceanic.SearchEngine\Oceanic.SearchEngine.csproj", "{4856D8FD-C664-4DCF-B131-24C5B3E98A8A}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Oceanic.SearchEngine", "Oceanic.SearchEngine\Oceanic.SearchEngine.csproj", "{4856D8FD-C664-4DCF-B131-24C5B3E98A8A}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Oceanic.SearchEngine.Data", "..\Oceanic.SearchEngine.Data\Oceanic.SearchEngine.Data.csproj", "{3E5BEB79-4B12-4646-803B-A62BBD760D93}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Oceanic.SearchEngine.Data", "..\Oceanic.SearchEngine.Data\Oceanic.SearchEngine.Data.csproj", "{3E5BEB79-4B12-4646-803B-A62BBD760D93}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OceanicSearchEngine.Data.Migrations", "..\Oceanic.Data.Migrations\OceanicSearchEngine.Data.Migrations.csproj", "{D141D7EA-AF17-4EF4-8B9B-6C784FEADAAA}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,6 +23,10 @@ Global
 		{3E5BEB79-4B12-4646-803B-A62BBD760D93}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{3E5BEB79-4B12-4646-803B-A62BBD760D93}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{3E5BEB79-4B12-4646-803B-A62BBD760D93}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D141D7EA-AF17-4EF4-8B9B-6C784FEADAAA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D141D7EA-AF17-4EF4-8B9B-6C784FEADAAA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D141D7EA-AF17-4EF4-8B9B-6C784FEADAAA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D141D7EA-AF17-4EF4-8B9B-6C784FEADAAA}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
