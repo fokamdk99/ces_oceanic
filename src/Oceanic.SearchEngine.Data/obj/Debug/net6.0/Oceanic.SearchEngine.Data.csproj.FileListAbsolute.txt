@@ -1,0 +1,14 @@
+C:\Users\stas\Documents\CES\implementation\ces_oceanic\src\Oceanic.SearchEngine.Data\obj\Debug\net6.0\Oceanic.SearchEngine.Data.csproj.AssemblyReference.cache
+C:\Users\stas\Documents\CES\implementation\ces_oceanic\src\Oceanic.SearchEngine.Data\obj\Debug\net6.0\Oceanic.SearchEngine.Data.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\stas\Documents\CES\implementation\ces_oceanic\src\Oceanic.SearchEngine.Data\obj\Debug\net6.0\Oceanic.SearchEngine.Data.AssemblyInfoInputs.cache
+C:\Users\stas\Documents\CES\implementation\ces_oceanic\src\Oceanic.SearchEngine.Data\obj\Debug\net6.0\Oceanic.SearchEngine.Data.AssemblyInfo.cs
+C:\Users\stas\Documents\CES\implementation\ces_oceanic\src\Oceanic.SearchEngine.Data\obj\Debug\net6.0\Oceanic.SearchEngine.Data.csproj.CoreCompileInputs.cache
+C:\Users\stas\Documents\CES\implementation\ces_oceanic\src\Oceanic.SearchEngine.Data\bin\Debug\net6.0\Oceanic.SearchEngine.Data.deps.json
+C:\Users\stas\Documents\CES\implementation\ces_oceanic\src\Oceanic.SearchEngine.Data\bin\Debug\net6.0\Oceanic.SearchEngine.Data.runtimeconfig.json
+C:\Users\stas\Documents\CES\implementation\ces_oceanic\src\Oceanic.SearchEngine.Data\bin\Debug\net6.0\Oceanic.SearchEngine.Data.dll
+C:\Users\stas\Documents\CES\implementation\ces_oceanic\src\Oceanic.SearchEngine.Data\bin\Debug\net6.0\Oceanic.SearchEngine.Data.pdb
+C:\Users\stas\Documents\CES\implementation\ces_oceanic\src\Oceanic.SearchEngine.Data\obj\Debug\net6.0\Oceanic.SearchEngine.Data.dll
+C:\Users\stas\Documents\CES\implementation\ces_oceanic\src\Oceanic.SearchEngine.Data\obj\Debug\net6.0\refint\Oceanic.SearchEngine.Data.dll
+C:\Users\stas\Documents\CES\implementation\ces_oceanic\src\Oceanic.SearchEngine.Data\obj\Debug\net6.0\Oceanic.SearchEngine.Data.pdb
+C:\Users\stas\Documents\CES\implementation\ces_oceanic\src\Oceanic.SearchEngine.Data\obj\Debug\net6.0\Oceanic.SearchEngine.Data.genruntimeconfig.cache
+C:\Users\stas\Documents\CES\implementation\ces_oceanic\src\Oceanic.SearchEngine.Data\obj\Debug\net6.0\ref\Oceanic.SearchEngine.Data.dll
