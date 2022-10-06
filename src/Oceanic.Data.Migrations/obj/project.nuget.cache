@@ -1,15 +1,15 @@
 {
   "version": 2,
-  "dgSpecHash": "ynYStZSs+T9bXKmuTcdbQxn1Ja8lp2wbSFQqDhXQE0ZeITbRB2DHcLhrICDdYCgvLCDrAhaZJjoY41iW/V8faw==",
+  "dgSpecHash": "yprnQYKLV3hPFzmAnotjJJNqjiqmaOjPR/fNOExQGlsqS7uBG1CBxKLvEm2NTtAO3BFJK2OaeWcYpR9z23C5Qw==",
   "success": true,
-  "projectFilePath": "C:\\Users\\stas\\Documents\\CES\\implementation\\ces_oceanic\\src\\Oceanic.Data.Migrations\\OceanicSearchEngine.Data.Migrations.csproj",
+  "projectFilePath": "C:\\Users\\kars\\Source\\Repos\\CES\\src\\Oceanic.Data.Migrations\\OceanicSearchEngine.Data.Migrations.csproj",
   "expectedPackageFiles": [
-    "C:\\Users\\stas\\.nuget\\packages\\microsoft.extensions.apidescription.server\\3.0.0\\microsoft.extensions.apidescription.server.3.0.0.nupkg.sha512",
-    "C:\\Users\\stas\\.nuget\\packages\\microsoft.openapi\\1.2.3\\microsoft.openapi.1.2.3.nupkg.sha512",
-    "C:\\Users\\stas\\.nuget\\packages\\swashbuckle.aspnetcore\\6.2.3\\swashbuckle.aspnetcore.6.2.3.nupkg.sha512",
-    "C:\\Users\\stas\\.nuget\\packages\\swashbuckle.aspnetcore.swagger\\6.2.3\\swashbuckle.aspnetcore.swagger.6.2.3.nupkg.sha512",
-    "C:\\Users\\stas\\.nuget\\packages\\swashbuckle.aspnetcore.swaggergen\\6.2.3\\swashbuckle.aspnetcore.swaggergen.6.2.3.nupkg.sha512",
-    "C:\\Users\\stas\\.nuget\\packages\\swashbuckle.aspnetcore.swaggerui\\6.2.3\\swashbuckle.aspnetcore.swaggerui.6.2.3.nupkg.sha512"
+    "C:\\Users\\kars\\.nuget\\packages\\microsoft.extensions.apidescription.server\\3.0.0\\microsoft.extensions.apidescription.server.3.0.0.nupkg.sha512",
+    "C:\\Users\\kars\\.nuget\\packages\\microsoft.openapi\\1.2.3\\microsoft.openapi.1.2.3.nupkg.sha512",
+    "C:\\Users\\kars\\.nuget\\packages\\swashbuckle.aspnetcore\\6.2.3\\swashbuckle.aspnetcore.6.2.3.nupkg.sha512",
+    "C:\\Users\\kars\\.nuget\\packages\\swashbuckle.aspnetcore.swagger\\6.2.3\\swashbuckle.aspnetcore.swagger.6.2.3.nupkg.sha512",
+    "C:\\Users\\kars\\.nuget\\packages\\swashbuckle.aspnetcore.swaggergen\\6.2.3\\swashbuckle.aspnetcore.swaggergen.6.2.3.nupkg.sha512",
+    "C:\\Users\\kars\\.nuget\\packages\\swashbuckle.aspnetcore.swaggerui\\6.2.3\\swashbuckle.aspnetcore.swaggerui.6.2.3.nupkg.sha512"
   ],
   "logs": []
 }
