@@ -5,16 +5,16 @@ namespace Oceanic.SearchEngine.Data.DataSeed
 {
     public static partial class ModelBuilderExtensions
     {
-        public static void SeedCities(this ModelBuilder modelBuilder)
+        public static void SeedParcels(this ModelBuilder modelBuilder)
         {
-            modelBuilder.Entity<City>()
+            modelBuilder.Entity<Parcel>()
                 .HasData(
-                    new City()
+                    new Parcel()
                     {
                         Id = 1,
                         Name = "addis abeba"
                     },
-                    new City()
+                    new Parcel()
                     {
                         Id = 2,
                         Name = "amatave"

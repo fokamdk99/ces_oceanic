@@ -5,19 +5,19 @@ namespace Oceanic.SearchEngine.Data.DataSeed
 {
     public static partial class ModelBuilderExtensions
     {
-        public static void SeedCities(this ModelBuilder modelBuilder)
+        public static void SeedRoutes(this ModelBuilder modelBuilder)
         {
-            modelBuilder.Entity<City>()
+            modelBuilder.Entity<Route>()
                 .HasData(
-                    new City()
+                    new Route()
                     {
                         Id = 1,
-                        Name = "addis abeba"
+                        TravelTime = 8
                     },
-                    new City()
+                    new Route()
                     {
                         Id = 2,
-                        Name = "amatave"
+                        TravelTime = 8
                     }
                 );
         }

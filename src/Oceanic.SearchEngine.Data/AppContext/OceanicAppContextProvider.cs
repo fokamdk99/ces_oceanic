@@ -6,13 +6,13 @@ using Oceanic.SearchEngine.Data.AppContext;
 
 namespace DagAir.Addresses.Data.AppContext
 {
-    public class DagAirAddressesAppContextProvider : IOceanicAppContextProvider
+    public class OceanicAppContextProvider : IOceanicAppContextProvider
     {
         private const string ConnectionStringName = "DagAir.Addresses";
         private readonly string _connectionString;
         private readonly ILoggerFactory _loggerFactory;
 
-        public DagAirAddressesAppContextProvider(IConfiguration configuration, ILoggerFactory loggerFactory)
+        public OceanicAppContextProvider(IConfiguration configuration, ILoggerFactory loggerFactory)
         {
             _loggerFactory = loggerFactory;
             var connectionString = configuration.GetConnectionString(ConnectionStringName);

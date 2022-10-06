@@ -5,19 +5,19 @@ namespace Oceanic.SearchEngine.Data.DataSeed
 {
     public static partial class ModelBuilderExtensions
     {
-        public static void SeedCities(this ModelBuilder modelBuilder)
+        public static void SeedUsers(this ModelBuilder modelBuilder)
         {
-            modelBuilder.Entity<City>()
+            modelBuilder.Entity<User>()
                 .HasData(
-                    new City()
+                    new User()
                     {
                         Id = 1,
-                        Name = "addis abeba"
+                        Email = "zulu@oceanic.com"
                     },
-                    new City()
+                    new User()
                     {
                         Id = 2,
-                        Name = "amatave"
+                        Email = "stas@oceanic.com"
                     }
                 );
         }

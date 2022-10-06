@@ -11,19 +11,7 @@ namespace Oceanic.SearchEngine.Data.AppEntitiesConfiguration
             builder.ConfigureBase();
             builder.HasKey(e => e.Id);
 
-            builder.HasOne(e => e.Country)
-                .WithMany(x => x.Addresses)
-                .HasForeignKey(e => e.CountryId)
-                .IsRequired();
-            
-            builder.HasOne(e => e.City)
-                .WithMany(x => x.Addresses)
-                .HasForeignKey(e => e.CityId)
-                .IsRequired();
-            
-            builder.HasOne(e => e.PostalCode)
-                .WithMany(x => x.Addresses)
-                .HasForeignKey(e => e.PostalCodeId)
+            builder.Property(e => e.Price)
                 .IsRequired();
         }
     }

@@ -2,12 +2,13 @@
 using Microsoft.EntityFrameworkCore;
 using Oceanic.SearchEngine.Data.AppContext;
 using Oceanic.SearchEngine.Data.AppEntities;
+using Oceanic.SearchEngine.Data.DataSeed;
 
 namespace DagAir.Addresses.Data.AppContext
 {
     public class OceanicAppContext : DbContext, IOceanicAppContext
     {
-        private const string Schema = "Oceanic";
+        private const string Schema = "db-oa-dk3";
         
         public OceanicAppContext() {}
         
@@ -21,7 +22,7 @@ namespace DagAir.Addresses.Data.AppContext
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
-            optionsBuilder.UseSnakeCaseNamingConvention();
+            //optionsBuilder.UseSnakeCaseNamingConvention();
             base.OnConfiguring(optionsBuilder);
         }
         
@@ -37,10 +38,11 @@ namespace DagAir.Addresses.Data.AppContext
         
         private static void SeedData(ModelBuilder modelBuilder)
         {
-            modelBuilder.SeedAddresses();
             modelBuilder.SeedCities();
-            modelBuilder.SeedCountries();
-            modelBuilder.SeedPostalCodes();
+            modelBuilder.SeedParcels();
+            modelBuilder.SeedPricings();
+            modelBuilder.SeedRoutes();
+            modelBuilder.SeedUsers();
         }
     }
 }

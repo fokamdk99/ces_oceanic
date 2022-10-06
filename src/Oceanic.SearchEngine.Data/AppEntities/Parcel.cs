@@ -3,8 +3,8 @@
     public class Parcel : AuditableEntity
     {
         public long Id { get; set; }
-        public virtual City From { get; set; }
-        public virtual City To { get; set; }
+        public virtual long FromId { get; set; }
+        public virtual long ToId { get; set; }
         public virtual ICollection<City> Stops { get; set; }
         public float Price { get; set; }
         public ParcelType Type { get; set; }
